@@ -13,7 +13,7 @@ public class DoMath {
 			System.out.println(Calculate.cube(2));
 			System.out.println(Calculate.average(3, 2));
 			System.out.println(Calculate.average(3, 1, 2));
-			System.out.println(Calculate.toDegrees(3.14159*2));
+			System.out.println(Calculate.toDegrees(3* (3.14159) /2));
 			//System.out.println(Calculate.toRadians(2.35619449019));
 	}
 }
