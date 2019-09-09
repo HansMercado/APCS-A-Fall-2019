@@ -30,4 +30,5 @@ public class Calculate {
 	public static String toImproperFrac(int whole, int numerator, int denominator) {
 		return (whole*denominator+numerator+"/"+denominator);
 	}
+	public static String toMixedNum(int numerator, int denominator)
 }
