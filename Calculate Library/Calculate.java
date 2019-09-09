@@ -22,7 +22,12 @@ public class Calculate {
 		return wholePi*180; //this functions accepts fractions*pi, so 3pi/2 makes 3/2s of 180.
 	}
 	public static double toRadians(double degrees) {
-		
-		return (3);
+		return (degrees/180*3.1415926); //for each 180 degrees, it returns the rounded pi
+	}
+	public static double discriminant(double A, double B, double C) {
+		return ((B*B)-4*A*C); //B^2-4ac is the discriminant lol I wish I had paid attention and learned this when it was more relevant
+	}
+	public static String toImproperFrac(int whole, int numerator, int denominator) {
+		return (whole*denominator+numerator+"/"+denominator);
 	}
 }
