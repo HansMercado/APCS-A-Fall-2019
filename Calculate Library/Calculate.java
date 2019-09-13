@@ -40,7 +40,7 @@ public class Calculate {
 		return (finalA+var+"^2"+" + "+finalB+var+" + "+finalC); //puts em together or should i say CONCATENATES THEM
 	}
 	//start of part 2 ************************************************
-	public static boolean isDivsibleBy(int dividend, int divisor) {
+	public static boolean isDivisibleBy(int dividend, int divisor) {
 		if (dividend%divisor==0) { //dividend is either evenly divisible by the divisor or it ain't
 			return(true);
 		}else {
@@ -91,4 +91,15 @@ public class Calculate {
 		}
 		return(ans);
 	}
-}
+	public static int factorial(int num) {
+		int ans=1;
+		for (int i=2; i < num+1; i++) {
+			ans=ans*i;
+		}
+		return ans;
+	}
+	public static boolean isPrime(int num) {
+		return false;
+		}
+	}
+

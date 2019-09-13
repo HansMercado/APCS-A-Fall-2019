@@ -21,7 +21,7 @@ public class DoMath {
 			System.out.println(Calculate.foil(2, 3, 6, -7, "g(x)"));
 			System.out.println(Calculate.foil(1, 0, 1, 0, "h(x)")); //might come back and get rid of the 0 stuff later
 			//start of part 2 ********************************
-			System.out.println(Calculate.isDivsibleBy(72, 91));
+			System.out.println(Calculate.isDivisibleBy(72, 91));
 			System.out.println(Calculate.absValue(-9000.1));
 			System.out.println(Calculate.max(2, 3));
 			System.out.println(Calculate.max(2, 3, 3));
@@ -30,6 +30,7 @@ public class DoMath {
 			System.out.println(Calculate.round2(.555));
 			//start of part 3 ********************************
 			System.out.println(Calculate.exponent(2, 10));
-			
+			System.out.println(Calculate.factorial(5));
+			System.out.println(Calculate.isPrime(7));
 	}
 }
