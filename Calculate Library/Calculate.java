@@ -99,7 +99,16 @@ public class Calculate {
 		return ans;
 	}
 	public static boolean isPrime(int num) {
-		return false;
+		boolean result=true;
+		for (int i=2; i<num; i++) {
+			if (num%i==0) {
+				result=false;
+			}
 		}
+		return result;
 	}
+	public static int gcf(int num1, int num2) {
+		for (int i=2; i < )
+	}
+}
 

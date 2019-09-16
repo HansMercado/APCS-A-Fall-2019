@@ -31,6 +31,6 @@ public class DoMath {
 			//start of part 3 ********************************
 			System.out.println(Calculate.exponent(2, 10));
 			System.out.println(Calculate.factorial(5));
-			System.out.println(Calculate.isPrime(7));
+			System.out.println(Calculate.isPrime(12));
 	}
 }
