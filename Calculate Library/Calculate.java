@@ -108,7 +108,14 @@ public class Calculate {
 		return result;
 	}
 	public static int gcf(int num1, int num2) {
-		for (int i=2; i < )
+		int largerNumber= (int) max(num1, num2);
+		for (int i=1; i < largerNumber; i++) {
+			if (isDivisibleBy(num1, i)) {
+				if (isDivisibleBy(num2, i)) {
+					
+				}
+			}
+		}
 	}
 }
 
