@@ -108,14 +108,24 @@ public class Calculate {
 		return result;
 	}
 	public static int gcf(int num1, int num2) {
-		int largerNumber= (int) max(num1, num2);
+		int largerNumber = (int) max(num1, num2);
+		int ans = 1;
 		for (int i=1; i < largerNumber; i++) {
 			if (isDivisibleBy(num1, i)) {
 				if (isDivisibleBy(num2, i)) {
-					
+					ans=i;
 				}
 			}
 		}
+		return ans;
 	}
+	public static double sqrt(double num) {
+	double educatedGuess = num/2.;
+	for (int i = 0; i < 20; i++) {
+		educatedGuess = (num/educatedGuess+educatedGuess)/2;
+	}
+		return ((educatedGuess+.005)*100)/100.0;
+	}
+	
 }
 
