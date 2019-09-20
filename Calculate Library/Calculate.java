@@ -124,7 +124,8 @@ public class Calculate {
 	for (int i = 0; i < 20; i++) {
 		educatedGuess = (num/educatedGuess+educatedGuess)/2;
 	}
-		return ((educatedGuess+.005)*100)/100.0;
+	int ans = (int) (((educatedGuess+.005)*100)/100);
+		return (double) ans;
 	}
 	
 }
