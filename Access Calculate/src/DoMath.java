@@ -34,5 +34,12 @@ public class DoMath {
 			System.out.println(Calculate.isPrime(12));
 			System.out.println(Calculate.gcf(40, 80));
 			System.out.println(Calculate.sqrt(999999));
+			//start of part 4 ********************************
+			/*/System.out.println(Calculate.factorial(-10));
+			System.out.println(Calculate.exponent(2, -7));
+			System.out.println(Calculate.isDivisibleBy(3, -3));
+			System.out.println(Calculate.sqrt(-10));/*/
+			System.out.println(Calculate.quadForm(1, 6, 9));
+			
 	}
 }

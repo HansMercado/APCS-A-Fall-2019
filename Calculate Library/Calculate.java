@@ -41,6 +41,7 @@ public class Calculate {
 	}
 	//start of part 2 ************************************************
 	public static boolean isDivisibleBy(int dividend, int divisor) {
+		if (divisor<0) throw new IllegalArgumentException("This program cannot use a negative divisor.");
 		if (dividend%divisor==0) { //dividend is either evenly divisible by the divisor or it ain't
 			return(true);
 		}else {
@@ -85,6 +86,7 @@ public class Calculate {
 	}
 	//start of part3 ****************************************************
 	public static double exponent(double num, int power) {
+		if (power<0) throw new IllegalArgumentException("This method cannot evaluate negative or fractional exponents.");
 		double ans = num;
 		for (int i=1;i!=power;i++) {
 			ans=(ans*num);
@@ -92,6 +94,7 @@ public class Calculate {
 		return(ans);
 	}
 	public static int factorial(int num) {
+		if (num<0) throw new IllegalArgumentException("This method cannot find the factorial of a negative number.");
 		int ans=1;
 		for (int i=2; i < num+1; i++) {
 			ans=ans*i;
@@ -120,13 +123,26 @@ public class Calculate {
 		return ans;
 	}
 	public static double sqrt(double num) {
-	double educatedGuess = num/2.;
-	for (int i = 0; i < 20; i++) {
+	if (num<0)throw new IllegalArgumentException("This method cannot find the square root of a ngeative number.");
+	double educatedGuess = num/2;
+	for (int i = 0; i < 5; i++) {
 		educatedGuess = (num/educatedGuess+educatedGuess)/2;
 	}
 	int ans = (int) (((educatedGuess+.005)*100)/100);
-		return (double) ans;
+	return ans;
 	}
-	
+	//start of part 4**************
+	public static String quadForm(double a, double b, double c) {
+		//negative b plus or minus the square root of b squared minus 4ac all over 2a
+		double root1 = (	(-1*b)	+	(sqrt	( exponent(b, 2)	-(4*a*c)	)))	/2*a;
+		double root2 = (	(-1*b)	-	(sqrt	( exponent(b, 2)	-(4*a*c)	)))	/2*a;
+		if (discriminant(a, b, c)<0) return ("No real roots.");
+		if (discriminant(a, b, c)==0) {
+			return (round2(root1)+"");
+		}
+		else {
+			return (root1 + " and " + root2);
+		}
+	}
 }
 
