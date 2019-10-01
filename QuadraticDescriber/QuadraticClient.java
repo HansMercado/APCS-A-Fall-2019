@@ -2,7 +2,7 @@ public class QuadraticClient {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(Quadratic.quadrDescriber());
+		Quadratic.quadrDescriber();
 		
 	}
 
