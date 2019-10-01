@@ -1,3 +1,4 @@
+//Hans Mercado, Period 3, APCS
 import java.util.Scanner;
 
 public class Quadratic {
@@ -64,11 +65,12 @@ public class Quadratic {
 	}
 	//cool part 5 starts here
 	public static void quadrDescriber () { //I can probably make this easier by making the method accept variables
-		while (true) {
+		boolean done = false;
+		Scanner scanner = new Scanner(System.in);
+		while (done == false) {
 			System.out.println("Welcome to the Quadratic Describer");
 			System.out.println("Provide values for the scanners a, b, and c");
-			Scanner scanner = new Scanner(System.in);
-			//scanners get int's, can be separated by spaces like "1 0 0" for 1 0 and 0
+			//scanners get the integers, and apparently can be separated by spaces like "1 0 0" for 1 0 and 0
 			double a = scanner.nextInt();
 			System.out.println("a: "+a);
 			double b = scanner.nextInt();
@@ -76,7 +78,7 @@ public class Quadratic {
 			double c = scanner.nextInt();
 			System.out.println("c: "+c);
 			System.out.println("Description of the graph of: ");
-			System.out.println(a+" x^2 + "+ b +" x + "+c);
+			System.out.println(a+" x^2 + "+ b +" x + "+c); //prints out the standard form quadratic using the inputs for a b and c
 			if (a<0) System.out.println("Opens : Down"); //checks if a value is negative
 			else System.out.println("Opens : Up");
 			System.out.println("Axis of Symmetry : "+axisOfSymmetry(a,b,c));
@@ -84,13 +86,14 @@ public class Quadratic {
 			System.out.println("x-intercept(s) : "+xIntercepts(a,b,c));
 			System.out.println("y-intercept : "+yIntercept(a,b,c));
 			System.out.println("");
-			System.out.print("Do you want to keep going? (type \"quit\" to end)");
-			Scanner end = new Scanner(System.in);
-			if (end.next() == "quit") {
-				break;
-			}
-	}
+			System.out.println("Do you want to keep going? (type \"quit\" to end)");
+			System.out.print(scanner.next());
+			if (scanner.next() == "quit") done = true;
+			//I was able to close the loop but I don't know how to get rid of the "quit" printed out at the end.
+		}
+		scanner.close();
 }
+	
 }
 
 
