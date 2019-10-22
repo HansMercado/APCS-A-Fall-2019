@@ -15,6 +15,8 @@ public class Split {
 		String[] part1split = "applespineapplesbreadlettucetomatobaconmayohambreadcheese".split("bread");
 		part1split = Arrays.toString(part1split).split("mayo");
 		
+			//concatenate array into a string
+			//only in between 2 breads
 	}
 
 }
