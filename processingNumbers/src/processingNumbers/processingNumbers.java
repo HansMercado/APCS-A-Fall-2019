@@ -1,6 +1,6 @@
 package processingNumbers;
 import java.util.Scanner;
-public class processingNumber {
+public class processingNumbers {
 	public static void main (String[] args) {
 		processNum();
 	}

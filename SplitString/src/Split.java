@@ -14,11 +14,16 @@ public class Split {
 		System.out.println(Arrays.toString(outputArray2));
 		//part 1 starts
 		/*/
-		String sandwich1 = "applespineapplesbreadlettucetomatobaconmayohambreadcheese"; 
-		String[] part1split = sandwich1.split("bread");
-		String sandwich2 = Arrays.toString(part1split);
-		System.out.println(sandwich2);
+		String string = "applespineapplesbreadlettucetomatobaconmayohambreadcheese"; 
+		String[] part1split = string.split("bread");
+		String splitted = Arrays.toString(part1split);
+		System.out.println(splitted);
+		for (String ingredients: part1split) {
+			System.out.println(ingredients);
+		}
 		
+			//find if there are ingredients before bread
+			//"mark" those indexed elements to not be put into the sandwhich string
 			//concatenate array into a string
 			//only in between 2 breads
 	}
