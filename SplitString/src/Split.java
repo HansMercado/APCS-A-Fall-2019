@@ -21,6 +21,10 @@ public class Split {
 		for (String ingredients: part1split) {
 			System.out.println(ingredients);
 		}
+		//NEW RESIN INSTRUCTIONS
+		//get index of bread and return errything after bread, allowing filling to be array 1 always be ingredient because bread been split
+		//if something bread or just bread, one array therefore no sandwich?
+		
 		
 			//find if there are ingredients before bread
 			//"mark" those indexed elements to not be put into the sandwhich string
