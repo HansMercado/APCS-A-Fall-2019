@@ -24,6 +24,7 @@ public class Split {
 		//NEW RESIN INSTRUCTIONS
 		//get index of bread and return errything after bread, allowing filling to be array 1 always be ingredient because bread been split
 		//if something bread or just bread, one array therefore no sandwich?
+		//split it on bread get rid of spaces.
 		
 		
 			//find if there are ingredients before bread
