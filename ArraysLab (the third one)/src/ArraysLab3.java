@@ -5,11 +5,12 @@ public class ArraysLab3 {
 		// TODO Auto-generated method stub
 		int[] arr1 = {2, 4, 5};
 		int[] arr2 = {8, 6, 5};
-		sum(arr1, arr2);
-		append(arr1, 2);
-		remove(arr1, 0);
-		System.out.println(sumEven(arr1));
-		
+		int[] arr3 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		//sum(arr1, arr2);
+		//append(arr1, 2);
+		//remove(arr1, 0);
+		//System.out.println(sumEven(arr1));
+		rotateRight(arr3);
 		
 
 	}
@@ -42,12 +43,27 @@ public class ArraysLab3 {
 			return arr2;
 			}
 		public static int sumEven(int[] arr) {
-		int sum=0;
-		for (int i=0;i<arr.length;i++) {
-			if (i%2==0) {
-				sum+=arr[i];
+			int sum=0;
+			for (int i=0;i<arr.length;i++) {
+				if (i%2==0) {
+					sum+=arr[i];
+				}
 			}
+			return sum;
 		}
-		return sum;
+		public static void rotateRight (int[] arr) {
+			if (arr.length>1) {
+				int temp = arr[0];
+				int temp2 = arr[0];
+				arr[0] = arr[arr.length-1];
+				for (int i=1; i<arr.length; i++) {
+						temp2 = arr[i];
+						arr[i] = temp;
+						temp=temp2;		
+				}
+			}
+			for (int i=0; i<arr.length; i++) {
+				System.out.println(arr[i]);
+			}
 		}
 }
