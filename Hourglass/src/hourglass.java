@@ -1,6 +1,6 @@
 
-public class hourclass {
-
+public class hourglass {
+	//RIP hourclass 2019-2019, you were the best pun name of them all
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//line 0
@@ -29,6 +29,8 @@ public class hourclass {
 		System.out.println("|");
 	}
 	public static void reprinter(int times, String character ) {
+	//simple method that repeatedly prints a character.
+	//all the lines end with a different character, so this method merely prints while the main method does the printline
 	for (int i = 0; i < times; i++) {
 		System.out.print(character);
 	}
