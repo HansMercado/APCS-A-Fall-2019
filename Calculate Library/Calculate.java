@@ -132,7 +132,7 @@ public class Calculate {
 	return ans;
 	}
 	//start of part 4**************
-	public static String quadForm(double a, double b, double c) {
+	public static String quadForm(int a, int b, int c) {
 		//negative b plus or minus the square root of b squared minus 4ac all over 2a
 		double root1 = (	(-1*b)	+	(sqrt	( exponent(b, 2)	-(4*a*c)	)))	/2*a;
 		double root2 = (	(-1*b)	-	(sqrt	( exponent(b, 2)	-(4*a*c)	)))	/2*a;
