@@ -72,7 +72,7 @@ public class Calculate {
 			return(num1);
 		}
 	}
-	public static double min(double num1, double num2) {
+	public static int min(int num1, int num2) {
 		if (num1<num2) {
 			return(num1);
 		}else {
