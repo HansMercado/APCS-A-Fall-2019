@@ -48,7 +48,14 @@ public class FracCalc {
     	} else {
     		fraction2 = factor2;
     	}
-    	
+    	/*/
+    	 * initialize 0 0 1 array
+    	 * using if statements for underscores and slashes change each whatever
+    	 * 
+    	 * 
+    	 * 
+    	 * 
+    	 */
     	if (factor2.contains("/")) {
     		String [] fraction2Arr = fraction2.split("/");
     		numerator = fraction2Arr[0];
