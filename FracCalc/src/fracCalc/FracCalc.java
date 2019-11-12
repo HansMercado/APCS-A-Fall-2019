@@ -37,34 +37,25 @@ public class FracCalc {
     	String operator = pt1split[1];
     	String factor2 = pt1split[2];
     	//do this for both operands!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    	String[] factor2Arr = factor2.split("_");
-    	String wholenumber = "0";
-    	String numerator = "0";
-    	String denominator = "1";
+    	String[] part2split = factor2.split("_");
+    	String[] factor2Arr = {"0", "0", "1"};
     	String fraction2 = "";
     	if (factor2.contains("_")) {
-    		wholenumber = factor2Arr[0];
-    		fraction2 = factor2Arr[1];
+    		factor2Arr[0] = part2split[0];
+    		fraction2 = part2split[1];
     	} else {
     		fraction2 = factor2;
     	}
-    	/*/
-    	 * initialize 0 0 1 array
-    	 * using if statements for underscores and slashes change each whatever
-    	 * 
-    	 * 
-    	 * 
-    	 * 
-    	 */
+    	
     	if (factor2.contains("/")) {
     		String [] fraction2Arr = fraction2.split("/");
-    		numerator = fraction2Arr[0];
-    		denominator = fraction2Arr[1];
+    		factor2Arr[1] = fraction2Arr[0];
+    		factor2Arr[2] = fraction2Arr[1];
     	}
     	else {
-    		wholenumber = factor2Arr[0];
+    		factor2Arr[0] = part2split[0];
     	}
-        return ("whole:"+wholenumber +" numerator:"+numerator+" denominator:"+denominator);
+        return ("whole:"+factor2Arr[0] +" numerator:"+factor2Arr[1]+" denominator:"+factor2Arr[2]);
     }
 
     // TODO: Fill in the space below with any helper methods that you think you will need
