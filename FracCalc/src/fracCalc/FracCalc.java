@@ -43,9 +43,7 @@ public class FracCalc {
     	if (factor2.contains("_")) {
     		factor2Arr[0] = part2split[0];
     		fraction2 = part2split[1];
-    	} else {
-    		fraction2 = factor2;
-    	}
+    	} else fraction2 = factor2;
     	
     	if (factor2.contains("/")) {
     		String [] fraction2Arr = fraction2.split("/");

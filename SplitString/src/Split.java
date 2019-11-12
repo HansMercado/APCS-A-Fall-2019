@@ -18,8 +18,10 @@ public class Split {
 		String[] part1split = string.split("bread");
 		String splitted = Arrays.toString(part1split);
 		System.out.println(splitted);
-		for (String ingredients: part1split) {
-			System.out.println(ingredients);
+		//if (string.charAt(0).equals('b'))
+		System.out.println(string.charAt(0));
+		if (string.indexOf("bread", string.indexOf("bread")+1) > -1) {
+			System.out.println("damn son where'd you find this");
 		}
 		//NEW RESIN INSTRUCTIONS
 		//get index of bread and return errything after bread, allowing filling to be array 1 always be ingredient because bread been split
