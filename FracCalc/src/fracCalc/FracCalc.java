@@ -75,16 +75,47 @@ public class FracCalc {
     	int[] factor1Ints = {Integer.parseInt(factor1Arr[0]), Integer.parseInt(factor1Arr[1]), Integer.parseInt(factor1Arr[2])};
     	int[] factor2Ints = {Integer.parseInt(factor2Arr[0]), Integer.parseInt(factor2Arr[1]), Integer.parseInt(factor2Arr[2])};
     	int[] ansInts = {0, 0, factor1Ints[2]};
-    	factor1 = toImproperFrac(factor1Ints[0], factor1Ints[1], factor1Ints[2]);
-    	factor2 = toImproperFrac(factor2Ints[0], factor2Ints[1], factor2Ints[2]);
-    	if (input.contains("+") || input.contains("-")) {
+    	if (operator.contains("+") || operator.contains("-")) {
+    		factor1Ints[1] *= factor2Ints[2];
     		factor2Ints[1] *= factor1Ints[2];
-    		factor2Ints[2] *= factor1Ints[2];
+    		factor1Ints[2] *= factor2Ints[2];
+    		factor2Ints[2] = factor1Ints[2];
     		//AAAAAAAAAAAAAAAAAAAAAAAAAAA COMMON FACTOR OR JUST TIMES THEM
+    		if (operator.contains("+")) {
     		ansInts[0] = factor1Ints[0] + factor2Ints[0];
     		ansInts[1] = factor1Ints[1] + factor2Ints[1];
+    		}
+    		if (operator.contains("-")) {
+    		ansInts[0] = factor1Ints[0] - factor2Ints[0];
+    		ansInts[1] = factor1Ints[1] - factor2Ints[1];
+    		}
+    		ansInts[2] = factor1Ints[2];
     	}
-        return ("whole:"+ansInts[0] +" numerator:"+ansInts[1]+" denominator:"+ansInts[2]);
+    	if (operator.contains("*") || operator.contains("/")){
+    		factor1 = toImproperFrac(factor1Ints[0], factor1Ints[1], factor1Ints[2]);
+        	factor2 = toImproperFrac(factor2Ints[0], factor2Ints[1], factor2Ints[2]);
+        	System.out.println(factor1 +" "+factor2);
+        	String[] dividentspit1 = factor1.split("/");
+        	String[] dividentspit2 = factor1.split("*");
+        	ansInts[0] = 0;
+    		ansInts[1] = 0;
+    		if (operator.contains("*")) {
+        		
+        	}
+        	if (operator.contains("/")) {
+        		
+        	}	
+    	}
+    	
+    	if (ansInts[1] <= ansInts[2]) {
+    		ansInts[0] += ansInts[1]/ansInts[2];
+    		ansInts[1] = ansInts[1]%ansInts[2];
+    		}
+    	if (ansInts[1]==0) ansInts[2] = 1;
+    	String answer = ansInts[0] +"_"+ansInts[1]+"/"+ansInts[2];
+    	if (ansInts[0] == 0) answer=ansInts[1]+"/"+ansInts[2];
+    	if (ansInts[1] == 0) answer=ansInts[0]+"";
+        return (answer);
     }
 
     // TODO: Fill in the space below with any helper methods that you think you will need
