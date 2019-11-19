@@ -95,15 +95,17 @@ public class FracCalc {
     		factor1 = toImproperFrac(factor1Ints[0], factor1Ints[1], factor1Ints[2]);
         	factor2 = toImproperFrac(factor2Ints[0], factor2Ints[1], factor2Ints[2]);
         	System.out.println(factor1 +" "+factor2);
-        	String[] dividentspit1 = factor1.split("/");
-        	String[] dividentspit2 = factor1.split("*");
+        	String[] dividendsplit1 = factor1.split("/");
+        	String[] dividendsplit2 = factor1.split("*");
         	ansInts[0] = 0;
     		ansInts[1] = 0;
     		if (operator.contains("*")) {
-        		
+        		ansInts[1] = Integer.parseInt(dividendsplit1[1])*Integer.parseInt(dividendsplit2[1]);
+        		ansInts[2] = Integer.parseInt(dividendsplit1[2])*Integer.parseInt(dividendsplit2[2]);
         	}
         	if (operator.contains("/")) {
-        		
+        		ansInts[1] = Integer.parseInt(dividendsplit1[1])*Integer.parseInt(dividendsplit2[2]);
+        		ansInts[2] = Integer.parseInt(dividendsplit1[2])*Integer.parseInt(dividendsplit2[1]);
         	}	
     	}
     	
