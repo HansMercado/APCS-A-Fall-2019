@@ -108,7 +108,7 @@ public class FracCalc {
         		ansInts[2] = Integer.parseInt(dividendsplit1[2])*Integer.parseInt(dividendsplit2[1]);
         	}	
     	}
-    	
+    	if (ansInts[1]<0) ansInts[1]*=-1;
     	if (ansInts[1] <= ansInts[2]) {
     		ansInts[0] += ansInts[1]/ansInts[2];
     		ansInts[1] = ansInts[1]%ansInts[2];
@@ -117,6 +117,14 @@ public class FracCalc {
     	String answer = ansInts[0] +"_"+ansInts[1]+"/"+ansInts[2];
     	if (ansInts[0] == 0) answer=ansInts[1]+"/"+ansInts[2];
     	if (ansInts[1] == 0) answer=ansInts[0]+"";
+    	if (factor1.charAt(0)=='-' || factor2.charAt(0)=='-') { //detects negatives
+    		if (!(factor1.charAt(0)=='-' && factor2.charAt(0)=='-')) {
+    			answer =("-"+answer);
+    		}
+    	}
+    	System.out.println(toImproperFrac(factor1Ints[0], factor1Ints[1], factor1Ints[2]));
+    	System.out.println(toImproperFrac(factor2Ints[0], factor2Ints[1], factor2Ints[2]));
+    	//-3_3/4 + 2_2/4
         return (answer);
     }
 
