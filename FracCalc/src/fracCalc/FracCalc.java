@@ -80,7 +80,6 @@ public class FracCalc {
     		factor2Ints[1] *= factor1Ints[2];
     		factor1Ints[2] *= factor2Ints[2];
     		factor2Ints[2] = factor1Ints[2];
-    		//AAAAAAAAAAAAAAAAAAAAAAAAAAA COMMON FACTOR OR JUST TIMES THEM
     		if (operator.contains("+")) {
     		ansInts[0] = factor1Ints[0] + factor2Ints[0];
     		ansInts[1] = factor1Ints[1] + factor2Ints[1];
