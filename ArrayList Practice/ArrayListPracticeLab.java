@@ -81,7 +81,13 @@ public class ArrayListPracticeLab
 	 * any Strings of even length.
 	 * removeEvenLength should not change the input ArrayList.
 	 */
-	
+	public static ArrayList<String> removeEvenLength(ArrayList<String> arrList) {
+		ArrayList<String> arrList2 = arrList;
+		for (int i=0; i<arrList2.size();i++) {
+			if (arrList.get(i).length()%2==0) arrList2.remove(i);
+		}
+		return arrList2;
+	}
 	
 	
 	
@@ -97,16 +103,24 @@ public class ArrayListPracticeLab
 	 * after the method finishes executing.
 	 */
 	
-	
-	
+	public static void doubleList(ArrayList<String> arrList) {
+		ArrayList<String> newList = new ArrayList<String>();
+		for (String str : arrList) {
+			newList.add(str);
+			newList.add(str);
+		}
+		arrList = newList;
+	}
 	
 	
 	public static void main(String[] args) 
 	{
 		// Declare an ArrayList of String named myList.  Then fill it with: "this", "is", "it".  Print myList using printMe().
-		
-		
-		
+		ArrayList<String> myList = new ArrayList<String>();
+		myList.add("this");
+		myList.add("is");
+		myList.add("it");
+		printMe(myList);
 		
 		
 		
@@ -118,7 +132,9 @@ public class ArrayListPracticeLab
 		String[] test_max_1 = {"to", "be", "or", "not", "to", "be", "hamlet"};  
 		String[] test_max_2 = {"Only one really long string"};
 		String[] test_max_3 = {};
-		
+		System.out.println(maxLength( convertArrayToList(test_max_1) ) );
+		System.out.println(maxLength( convertArrayToList(test_max_2) ) );
+		System.out.println(maxLength( convertArrayToList(test_max_3) ) );
 		//printMe( maxLength( convertArrayToList(test_max_1) ) );
 		
 		
@@ -136,8 +152,11 @@ public class ArrayListPracticeLab
 		String[] test_swap_3 = {"don't move me"};
 		String[] test_swap_4 = {};
 
-		
-		
+		System.out.println(swapPairs(convertArrayToList(test_swap_1)));
+		/*/System.out.println(swapPairs(convertArrayToList(test_swap_2)));
+		System.out.println(swapPairs(convertArrayToList(test_swap_3)));
+		System.out.println(swapPairs(convertArrayToList(test_swap_4)));
+		/*/
 
 		// To test your removeEvenLength method, convert the following to ArrayLists of Strings and 
 		// pass them into your removeEvenLength method.  
