@@ -12,9 +12,13 @@ public class TextExcel
 	    // Add your command loop here
 		boolean active = true;
 		Scanner sc = new Scanner(System.in);
-		Spreadsheet sheet = new Spreadsheet;
+		Spreadsheet sheet = new Spreadsheet();
 		while (active) {
-			Spreadsheet.processCommand(sc.nextLine())
+			System.out.println(sheet.processCommand(sc.nextLine()));
+			if (sc.nextLine().equals("quit")) {
+				active = false;
+			}
 		}
+		sc.close();
 	}
 }

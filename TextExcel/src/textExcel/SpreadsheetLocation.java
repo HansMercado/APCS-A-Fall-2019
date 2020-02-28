@@ -10,23 +10,26 @@ public class SpreadsheetLocation implements Location
 	 * -1 -> index for row
 	 * char col -> charAt - A
 	 */
+	int row;
+	int col;
     @Override
     public int getRow()
     {
         // TODO Auto-generated method stub
-        return 0;
+        return row;
     }
 
     @Override
     public int getCol()
     {
         // TODO Auto-generated method stub
-        return 0;
+        return col;
     }
     
     public SpreadsheetLocation(String cellName)
     {
         // TODO: Fill this out with your own code
+    	
     }
 
 }
