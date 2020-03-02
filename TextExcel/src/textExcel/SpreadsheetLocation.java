@@ -29,7 +29,12 @@ public class SpreadsheetLocation implements Location
     public SpreadsheetLocation(String cellName)
     {
         // TODO: Fill this out with your own code
-    	
+    	/*/charAt0 char for Col
+    	 * use Substring 1 for string for Row
+    	 * String row = parseInt
+    	 * -1 -> index for row
+    	 * char col -> charAt - A
+    	 */
     }
 
 }
