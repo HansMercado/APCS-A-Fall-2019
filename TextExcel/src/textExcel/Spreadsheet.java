@@ -4,8 +4,8 @@ package textExcel;
 
 public class Spreadsheet implements Grid
 {
-	int numRows;
-	int numCols;
+	private int numRows;
+	private int numCols;
 	@Override
 	public String processCommand(String command)
 	{
@@ -38,10 +38,12 @@ public class Spreadsheet implements Grid
 	public String getGridText()
 	{
 		// TODO Auto-generated method stub
-		return null;
+		return "";
 	}
 	//constructor
 	public Spreadsheet() {
+		numRows=20;
+		numCols=12;
 		Cell[][] cellArr = new Cell[numRows][numCols];
 		for (int i = 0; i < cellArr.length; i++) {
 			for (int j = 0; j < cellArr[1].length; j++) {

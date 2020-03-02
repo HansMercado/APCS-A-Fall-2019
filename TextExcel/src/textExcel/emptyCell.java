@@ -5,14 +5,15 @@ public class emptyCell implements Cell {
 	@Override
 	public String abbreviatedCellText() {
 		// TODO Auto-generated method stub
-		return "";
+		return text;
 	}
 
 	@Override
 	public String fullCellText() {
 		// TODO Auto-generated method stub
-		return "";
+		return text;
 	}
 	public emptyCell() {
+		text="";
 	}
 }

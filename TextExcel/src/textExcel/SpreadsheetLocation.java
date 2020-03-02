@@ -10,8 +10,8 @@ public class SpreadsheetLocation implements Location
 	 * -1 -> index for row
 	 * char col -> charAt - A
 	 */
-	int row;
-	int col;
+	private int row;
+	private int col;
     @Override
     public int getRow()
     {
@@ -29,6 +29,9 @@ public class SpreadsheetLocation implements Location
     public SpreadsheetLocation(String cellName)
     {
         // TODO: Fill this out with your own code
+    	col = cellName.charAt(0)-'A';
+    	row = Integer.parseInt(cellName.substring(1))-1;
+    	
     	/*/charAt0 char for Col
     	 * use Substring 1 for string for Row
     	 * String row = parseInt
