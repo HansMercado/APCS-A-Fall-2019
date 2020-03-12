@@ -11,7 +11,12 @@ public class Spreadsheet implements Grid
 	public String processCommand(String command)
 	{
 		// TODO Auto-generated method stub
-		return "";
+		if (command.contains("clear")) {
+			if (command.equals("clear")) {
+				clearAll(cellArr);
+			}
+		}
+		return getGridText();
 	}
 
 	@Override
@@ -41,13 +46,19 @@ public class Spreadsheet implements Grid
 		// TODO Auto-generated method stub
 		String fullGrid = "   |";
 		char c;
-		for (char i = 'A'; i < 'L'; i++) {
+		for (char i = 'A'; i < 'M'; i++) {
 			c = i;
-			fullGrid+=c +"         ";
+			fullGrid+=c +"         |";
 		}
 		fullGrid+="\n";
 		for (int i=0; i<20; i++) {
-			//fullGrid
+			fullGrid+=i+1+"";
+			if (i>9) fullGrid+=" "; //accounts for when column of numbers is longer than 1
+			fullGrid+="  |";
+			for (int j=0; j<12; j++) {
+				fullGrid+=cellArr[i][j].abbreviatedCellText()+"|";
+			}
+			fullGrid+="\n";
 		}
 		return fullGrid;
 	}
@@ -55,9 +66,12 @@ public class Spreadsheet implements Grid
 	public Spreadsheet() {
 		numRows=20;
 		numCols=12;
-		Cell[][] cellArr = new Cell[numRows][numCols];
-		for (int i = 0; i < cellArr.length; i++) { //move to a new method
-			for (int j = 0; j < cellArr[1].length; j++) {
+		cellArr = new Cell[numRows][numCols];
+		clearAll(cellArr);
+	}
+	public void clearAll(Cell[][] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[1].length; j++) {
 				cellArr[i][j] = new emptyCell();
 			}
 		}
