@@ -10,11 +10,25 @@ public class Spreadsheet implements Grid
 	@Override
 	public String processCommand(String command)
 	{
-		// TODO Auto-generated method stub
 		if (command.contains("clear")) {
+			//clear all of it.
 			if (command.equals("clear")) {
 				clearAll(cellArr);
+			} else { //clear a cell specified.
+				SpreadsheetLocation  loc = new SpreadsheetLocation(command.substring(6));
+				cellArr[loc.getRow()][loc.getCol()] = new emptyCell();
+				//this is where the "clear " of "clear A1" ends. 
 			}
+		}
+		if (command.contains("=")) {
+			SpreadsheetLocation  loc = new SpreadsheetLocation(command.substring(0,command.indexOf("=")-1));
+			//if it's an assignment it'll have the equals sign
+			cellArr[loc.getRow()][loc.getCol()] = new TextCell(command.substring(5));
+		}
+		if (command.length()<4) {
+			System.out.println("FUCC");
+			SpreadsheetLocation  loc = new SpreadsheetLocation(command);
+			return (cellArr[loc.getRow()][loc.getCol()].fullCellText());
 		}
 		return getGridText();
 	}
@@ -53,8 +67,8 @@ public class Spreadsheet implements Grid
 		fullGrid+="\n";
 		for (int i=0; i<20; i++) {
 			fullGrid+=i+1+"";
-			if (i>9) fullGrid+=" "; //accounts for when column of numbers is longer than 1
-			fullGrid+="  |";
+			if (i<9) fullGrid+=" "; //accounts for when column of numbers is longer than 1
+			fullGrid+=" |";
 			for (int j=0; j<12; j++) {
 				fullGrid+=cellArr[i][j].abbreviatedCellText()+"|";
 			}

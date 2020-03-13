@@ -13,9 +13,11 @@ public class TextExcel
 		boolean active = true;
 		Scanner sc = new Scanner(System.in);
 		Spreadsheet sheet = new Spreadsheet();
+		String input;
 		while (active) {
-			System.out.println(sheet.processCommand(sc.nextLine()));
-			if (sc.nextLine().equals("quit")) {
+			input = sc.nextLine();
+			System.out.println(sheet.processCommand(input));
+			if (input.equals("quit")) {
 				active = false;
 			}
 		}

@@ -4,7 +4,6 @@ public class TextCell implements Cell {
 	private String text;
 	@Override
 	public String abbreviatedCellText() {
-		// TODO Auto-generated method stub
 		String abbText = text+="          ";;
 		return abbText.substring(0,10);
 	}
@@ -15,7 +14,7 @@ public class TextCell implements Cell {
 		return ("\""+text+"\"");
 	}
 	public TextCell(String s) {
-		s=s.split("\"")[0];
+		s=s.split("\"")[1];
 		text=s;
 	}
 }

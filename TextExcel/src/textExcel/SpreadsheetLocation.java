@@ -28,9 +28,11 @@ public class SpreadsheetLocation implements Location
     
     public SpreadsheetLocation(String cellName)
     {
-        // TODO: Fill this out with your own code
-    	col = cellName.charAt(0)-'A';
     	row = Integer.parseInt(cellName.substring(1))-1;
+    	//deal with capitals.
+    	if (cellName.charAt(0)>90) {
+    		col = cellName.charAt(0) - 'A' -32;
+    	} else col = cellName.charAt(0)-'A';
     	
     	/*/charAt0 char for Col
     	 * use Substring 1 for string for Row
