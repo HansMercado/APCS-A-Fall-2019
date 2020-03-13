@@ -15,7 +15,8 @@ public class TextCell implements Cell {
 		return ("\""+text+"\"");
 	}
 	public TextCell(String s) {
-		String split =s.split("\"")[1];
+		String split = s.split("\"")[1];
 		text=split;
+//		text = s.substring(1,s.length()-1);
 	}
 }
