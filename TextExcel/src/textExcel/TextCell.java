@@ -4,7 +4,8 @@ public class TextCell implements Cell {
 	private String text;
 	@Override
 	public String abbreviatedCellText() {
-		String abbText = text+="          ";;
+		String abbText = text;
+		abbText+="          ";
 		return abbText.substring(0,10);
 	}
 
@@ -14,7 +15,7 @@ public class TextCell implements Cell {
 		return ("\""+text+"\"");
 	}
 	public TextCell(String s) {
-		s=s.split("\"")[1];
-		text=s;
+		String split =s.split("\"")[1];
+		text=split;
 	}
 }

@@ -26,7 +26,6 @@ public class Spreadsheet implements Grid
 			cellArr[loc.getRow()][loc.getCol()] = new TextCell(command.substring(5));
 		}
 		if (command.length()<4) {
-			System.out.println("FUCC");
 			SpreadsheetLocation  loc = new SpreadsheetLocation(command);
 			return (cellArr[loc.getRow()][loc.getCol()].fullCellText());
 		}
