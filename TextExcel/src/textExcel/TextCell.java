@@ -17,6 +17,6 @@ public class TextCell implements Cell {
 	public TextCell(String s) {
 		String split = s.split("\"")[1];
 		text=split;
-//		text = s.substring(1,s.length()-1);
+//		text = s.substring(1,s.length()-1); make a substring ends with 1st quote then goes to 2nd quotes
 	}
 }
